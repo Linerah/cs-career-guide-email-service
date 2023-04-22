@@ -1,12 +1,12 @@
 import base64
 import io
 
-from flask import Flask
 from flask_cors import CORS, cross_origin
 from flask_mail import Mail, Message
-from flask import Flask, request, jsonify
+from flask import Flask, request
 
 app = Flask(__name__)
+CORS(app)
 app.config['MAIL_SERVER'] = 'smtp.office365.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
